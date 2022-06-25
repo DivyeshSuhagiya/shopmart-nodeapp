@@ -1,0 +1,563 @@
+
+  {
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0",
+      "title": "shopmart",
+      "contact": {}
+    },
+    "host": "shopmart-nodeapp.herokuapp.com",
+    "basePath": "/api",
+    "securityDefinitions": {},
+    "schemes": [
+      "https","http"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/product/get": {
+        "get": {
+          "summary": "get product",
+          "tags": [
+            "product"
+          ],
+          "operationId": "getproduct",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/product/post": {
+        "post": {
+          "summary": "post product",
+          "tags": [
+            "product"
+          ],
+          "operationId": "postproduct",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "consumes": [
+            "application/x-www-form-urlencoded"
+          ],
+          "parameters": [
+            {
+              "name": "shopName",
+              "in": "formData",
+              "required": true,
+              "type": "string",
+              "description": ""
+            },
+            {
+              "name": "price",
+              "in": "formData",
+              "required": true,
+              "type": "integer",
+              "format": "int32",
+              "description": ""
+            },
+            {
+              "name": "offerPrice",
+              "in": "formData",
+              "required": true,
+              "type": "string",
+              "description": ""
+            },
+            {
+              "name": "discount",
+              "in": "formData",
+              "required": true,
+              "type": "integer",
+              "format": "int32",
+              "description": ""
+            },
+            {
+              "name": "productName",
+              "in": "formData",
+              "required": true,
+              "type": "string",
+              "description": ""
+            },
+            {
+              "name": "rating",
+              "in": "formData",
+              "required": true,
+              "type": "integer",
+              "format": "int32",
+              "description": ""
+            },
+            {
+              "name": "category",
+              "in": "formData",
+              "required": true,
+              "type": "string",
+              "description": ""
+            },
+            {
+              "name": "productImage",
+              "in": "formData",
+              "required": true,
+              "type": "string",
+              "description": ""
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/product/delete": {
+        "delete": {
+          "summary": "delete product",
+          "tags": [
+            "product"
+          ],
+          "operationId": "deleteproduct",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "query",
+              "required": true,
+              "type": "string",
+              "description": ""
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/product/update": {
+        "post": {
+          "summary": "update product",
+          "tags": [
+            "product"
+          ],
+          "operationId": "updateproduct",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "consumes": [
+            "application/x-www-form-urlencoded"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "formData",
+              "required": true,
+              "type": "string",
+              "description": ""
+            },
+            {
+              "name": "price",
+              "in": "formData",
+              "required": true,
+              "type": "integer",
+              "format": "int32",
+              "description": ""
+            },
+            {
+              "name": "offerPrice",
+              "in": "formData",
+              "required": true,
+              "type": "integer",
+              "format": "int32",
+              "description": ""
+            },
+            {
+              "name": "discount",
+              "in": "formData",
+              "required": true,
+              "type": "integer",
+              "format": "int32",
+              "description": ""
+            },
+            {
+              "name": "productName",
+              "in": "formData",
+              "required": true,
+              "type": "string",
+              "description": ""
+            },
+            {
+              "name": "rating",
+              "in": "formData",
+              "required": true,
+              "type": "integer",
+              "format": "int32",
+              "description": ""
+            },
+            {
+              "name": "category",
+              "in": "formData",
+              "required": true,
+              "type": "string",
+              "description": ""
+            },
+            {
+              "name": "shopName",
+              "in": "formData",
+              "required": true,
+              "type": "string",
+              "description": ""
+            },
+            {
+              "name": "productImage",
+              "in": "formData",
+              "required": true,
+              "type": "string",
+              "description": ""
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/product/getById": {
+        "get": {
+          "summary": "getByID product",
+          "tags": [
+            "product"
+          ],
+          "operationId": "getByIDproduct",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "query",
+              "required": true,
+              "type": "string",
+              "description": ""
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/user/get": {
+        "get": {
+          "summary": "user get",
+          "tags": [
+            "user"
+          ],
+          "operationId": "userget",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/user/register": {
+        "post": {
+          "summary": "user register",
+          "tags": [
+            "user"
+          ],
+          "operationId": "userregister",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/user/login": {
+        "post": {
+          "summary": "user login",
+          "tags": [
+            "user"
+          ],
+          "operationId": "userlogin",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/userloginrequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/activateAccount": {
+        "post": {
+          "summary": "active user",
+          "tags": [
+            "user"
+          ],
+          "operationId": "activeuser",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/activeuserrequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/": {
+        "post": {
+          "summary": "forget passowrd",
+          "tags": [
+            "user"
+          ],
+          "operationId": "forgetpassowrd",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/user/verifyOtpCode": {
+        "post": {
+          "summary": "verify otp",
+          "tags": [
+            "user"
+          ],
+          "operationId": "verifyotp",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/verifyotprequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/user/changePassword": {
+        "post": {
+          "summary": "change password",
+          "tags": [
+            "user"
+          ],
+          "operationId": "changepassword",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/changepasswordrequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "userloginrequest": {
+        "title": "userloginrequest",
+        "example": {
+          "email": "",
+          "password": ""
+        },
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ]
+      },
+      "activeuserrequest": {
+        "title": "activeuserrequest",
+        "example": {
+          "email": "suhagiyadivyesh1515@gmail.com",
+          "accountActivationCode": "332895"
+        },
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "accountActivationCode": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "accountActivationCode"
+        ]
+      },
+      "verifyotprequest": {
+        "title": "verifyotprequest",
+        "example": {
+          "email": "",
+          "otpCode": null,
+          "newPassword": "divyesh@111",
+          "confirmPassword": "divyesh@111"
+        },
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "otpCode": {
+            "type": "string"
+          },
+          "newPassword": {
+            "type": "string"
+          },
+          "confirmPassword": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "otpCode",
+          "newPassword",
+          "confirmPassword"
+        ]
+      },
+      "changepasswordrequest": {
+        "title": "changepasswordrequest",
+        "example": {
+          "email": "suhagiyadivyesh1515@gmail.com",
+          "oldPassword": "divyesh@111",
+          "newPassword": "divyesh@new",
+          "confirmPassword": "divyesh@new"
+        },
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "oldPassword": {
+            "type": "string"
+          },
+          "newPassword": {
+            "type": "string"
+          },
+          "confirmPassword": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "oldPassword",
+          "newPassword",
+          "confirmPassword"
+        ]
+      }
+    },
+    "tags": [
+      {
+        "name": "product"
+      },
+      {
+        "name": "user"
+      }
+    ]
+  }
