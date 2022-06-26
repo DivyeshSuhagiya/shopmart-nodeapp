@@ -7,14 +7,17 @@ var productSchema = new mongoose.Schema(
     shopName: {
       type: String,
       trim: true,
+      default : false
     },
     price: {
       type: Number,
       trim: true,
+      default : false
     },
     offerPrice: {
       type: Number,
       trim: true,
+      default : false
     },
     productImage: {
       type: String,
@@ -24,23 +27,29 @@ var productSchema = new mongoose.Schema(
     discount: {
       type: Number,
       trim: true,
+      default : false
     },
     key: {
       type: String,
       default: "",
       trim: true,
+      default : false
+
     },
     productName: {
       type: String,
       trim: true,
+      default : false
     },
     rating: {
       type: Number,
       trim: true,
+      default : false
     },
     category: {
       type: String,
-      trim: true
+      trim: true,
+      default : false
     },
     createdBy: {
       type: String,
