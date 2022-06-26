@@ -30,10 +30,6 @@ var productSchema = new mongoose.Schema(
       default: "",
       trim: true,
     },
-    userId : {
-      type : String,
-      trim : true
-    },
     productName: {
       type: String,
       trim: true,

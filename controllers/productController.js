@@ -32,8 +32,7 @@ exports.product = {
         discount: req.body.discount,
         productName: req.body.productName,
         rating: req.body.rating,
-        category: req.body.category,
-        userId : req.body.userId
+        category: req.body.category
       }
       if(req.file){
         product.productImage = req.file.path
@@ -73,8 +72,7 @@ exports.product = {
         discount: req.body.discount,
         productName: req.body.productName,
         rating: req.body.rating,
-        category: req.body.category,
-        userId : req.body.userId
+        category: req.body.category
       }
         if(req.file){
           product.productImage = req.file.path
