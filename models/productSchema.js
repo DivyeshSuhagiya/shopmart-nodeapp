@@ -51,6 +51,11 @@ var productSchema = new mongoose.Schema(
       trim: true,
       default : false
     },
+    userId : {
+      type : String,
+      trim : true,
+      default :false
+    },
     createdBy: {
       type: String,
       default: false,
