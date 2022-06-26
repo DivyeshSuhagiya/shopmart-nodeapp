@@ -8,20 +8,24 @@ var productSchema = new mongoose.Schema(
       type: String,
       required: true,
       trim: true,
+      require:true
     },
     price: {
       type: Number,
       required: true,
       trim: true,
+      require:true
     },
     offerPrice: {
       type: Number,
-      trim: true
+      trim: true,
+      require:true
     },
     productImage: {
       type: String,
       trim: true,
       default: "",
+      require:true
     },
     discount: {
       type: Number,
@@ -31,6 +35,11 @@ var productSchema = new mongoose.Schema(
       type: String,
       default: "",
       trim: true,
+    },
+    userId : {
+      type : String,
+      required : true,
+      trim : true
     },
     productName: {
       type: String,
@@ -45,12 +54,6 @@ var productSchema = new mongoose.Schema(
       type: String,
       required: true,
       trim: true
-    },
-    forgetPasswordOtpExpireTime: {
-      type: Date,
-    },
-    accountActivationCode: {
-      type: String,
     },
     createdBy: {
       type: String,
