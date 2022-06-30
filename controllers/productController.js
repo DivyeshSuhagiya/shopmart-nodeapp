@@ -1,3 +1,4 @@
+const { func } = require('joi')
 const mongoose = require('mongoose')
 const PRODUCT = mongoose.model('products')
 const multer = require('multer')
@@ -124,6 +125,29 @@ exports.product = {
       }
       return successResponse(res, {
         data: productInfo,
+      })
+    } catch (error) {
+      return errorResponse(error, req, res)
+    }
+  },
+  search : async function(req,res) {
+    try {
+      const productInfo = await PRODUCT.find({
+        // category : {$regex :  req.params.category}
+        category : {$regex :  `.*${req.params.category}.*` , $options : "i"}
+      })
+      return successResponse(res, {
+        data: productInfo,
+      })
+    } catch (error) {
+      return errorResponse(error, req, res)
+    }
+  },
+  deleteAll : async function(req,res) {
+    try {
+      await PRODUCT.remove()
+      return successResponse(res, {
+        message: 'All Product deleted successfully',
       })
     } catch (error) {
       return errorResponse(error, req, res)

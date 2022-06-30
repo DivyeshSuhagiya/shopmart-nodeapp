@@ -7,39 +7,44 @@ var productSchema = new mongoose.Schema(
     shopName: {
       type: String,
       trim: true,
-      default : false
+      default : false,
+      required :true
     },
     price: {
       type: Number,
       trim: true,
-      default : false
+      default : false,
+      required :true
     },
     offerPrice: {
       type: Number,
       trim: true,
-      default : false
+      default : false,
+      required :true
     },
     productImage: {
       type: String,
       trim: true,
       default: "",
+      required :true
     },
     discount: {
       type: Number,
       trim: true,
-      default : false
+      default : false,
+      required :true
     },
     key: {
       type: String,
       default: "",
       trim: true,
       default : false
-
     },
     productName: {
       type: String,
       trim: true,
-      default : false
+      default : false,
+      required :true
     },
     rating: {
       type: Number,
@@ -49,12 +54,14 @@ var productSchema = new mongoose.Schema(
     category: {
       type: String,
       trim: true,
-      default : false
+      default : false,
+      required :true
     },
     userId : {
       type : String,
       trim : true,
-      default :false
+      default :false,
+      required :true
     },
     createdBy: {
       type: String,
