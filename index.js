@@ -12,7 +12,9 @@ const path = require('path')
 app.use('/uploads', express.static('uploads'))
 
 
-// app.use(fileUpload())
+app.use(fileUpload({
+    useTempFiles:true
+}))
 
 app.use(
     express.json({
